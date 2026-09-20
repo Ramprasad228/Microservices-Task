@@ -1,0 +1,36 @@
+services:
+  user-service:
+    build:
+      context: ./Microservices/user-service
+      dockerfile: Dockerfile
+    image: microservices/user-service:latest
+    ports:
+      - "3000:3000"
+
+  product-service:
+    build:
+      context: ./Microservices/product-service
+      dockerfile: Dockerfile
+    image: microservices/product-service:latest
+    ports:
+      - "3001:3001"
+
+  order-service:
+    build:
+      context: ./Microservices/order-service
+      dockerfile: Dockerfile
+    image: microservices/order-service:latest
+    ports:
+      - "3002:3002"
+
+  gateway-service:
+    build:
+      context: ./Microservices/gateway-service
+      dockerfile: Dockerfile
+    image: microservices/gateway-service:latest
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
+    ports:
+      - "3003:3003"

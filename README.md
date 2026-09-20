@@ -59,9 +59,9 @@ This document provides details on testing various services after running the `do
 ---
 
 ## Instructions
-1. Start all services using the `docker-compose` file:
+1. Build and start all services using the Compose file:
    ```
-   docker-compose up
+  docker compose up --build
    ```
 2. Once the services are running, use the above endpoints to verify the functionality.
 
