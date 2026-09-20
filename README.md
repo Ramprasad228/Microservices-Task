@@ -3,6 +3,8 @@
 ## Overview
 This document provides details on testing various services after running the `docker-compose` file. These services include User, Product, Order, and Gateway Services. Each service has its own endpoints for testing purposes.
 
+For the complete architecture, Docker, verification, API, and troubleshooting guide, see [docs/MICROSERVICES_GUIDE.md](docs/MICROSERVICES_GUIDE.md).
+
 ---
 
 ## Services and Endpoints
